@@ -1,0 +1,6 @@
+- name: inventory variables
+  hosts: ansible
+  tasks:
+  - name: printing the employee information
+    ansible.builtin.debug:
+       msg: This information if from {{ SOURCE }} - My name is {{ NAME }}, working as {{ ROLE }}. I joined wipro on {{ DOJ }}.
