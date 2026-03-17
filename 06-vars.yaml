@@ -1,6 +1,5 @@
 - name: inventory variables
   hosts: ansible
-  connection: ansible
   tasks:
   - name: printing the employee information
     ansible.builtin.debug:
