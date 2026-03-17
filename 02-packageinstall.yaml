@@ -3,6 +3,6 @@
   become: yes
   tasks:
   - ansible.builtin.package:
-    name: nginx
-    state: present
-    enabled: true
+      name: nginx
+      state: present
+      enabled: true
