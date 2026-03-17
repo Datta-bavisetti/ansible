@@ -1,7 +1,7 @@
 - name: external variables
   hosts: ansible
   vars_files:
-    empinformation
+    empinformation.yaml
   tasks:
   - name: printing the employee information
     ansible.builtin.debug:
