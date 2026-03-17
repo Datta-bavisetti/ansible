@@ -1,0 +1,17 @@
+- name: asking user to enter the details
+  hosts: ansible
+  vars_prompt:
+  - name: username
+    prompt: Please enter username
+    private: false
+  
+  - name: password
+    prompt: Please enter username
+    private: true
+  tasks:
+  - name: print the details which captured from user
+    ansible.builtin.debug:
+      msg: Dear {{ username }}, ..Welcome to online shopping..
+  
+  
+     
