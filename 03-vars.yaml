@@ -1,0 +1,11 @@
+- name: play level variables
+  hosts: ansible
+  vars:
+    NAME: Datta
+    ROLE: DevOps Engineer
+    DOJ: 16-MAY-2022
+  tasks:
+  - ansible.builtin.debug:
+      name: printing the employee information
+      msg: My name is {{ NAME }}, working as {{ ROLE }}. I joined wipro on {{ DOJ }}
+ 
