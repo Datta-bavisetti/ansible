@@ -1,0 +1,10 @@
+- name: external variables
+  hosts: ansible
+  vars_files:
+    empinformation
+  tasks:
+  - name: printing the employee information
+    ansible.builtin.debug:
+      msg: My name is {{ NAME }}, working as {{ ROLE }}. I joined wipro on {{ DOJ }}.
+      
+
