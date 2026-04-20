@@ -11,8 +11,16 @@
 
   vars_files:
   - empinformation.yaml
-  
+
   tasks:
   - name: print the name
+    vars:
+    DATA: Data is from Task
     ansible.builtin.debug:
       msg: "This {{ DATA }}"
+
+# 1. Args
+# 2.
+# 3.
+# 4.
+# 5.
