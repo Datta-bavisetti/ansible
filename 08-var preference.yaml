@@ -1,8 +1,8 @@
 - name: variable priority
   hosts: local
   connection: local
-  vars: 
-    DATA: "Data is from Playlevel"
+  # vars: 
+  #   DATA: "Data is from Playlevel"
   
   # vars_prompt: 
   # - name: DATA
