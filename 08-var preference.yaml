@@ -19,8 +19,10 @@
     ansible.builtin.debug:
       msg: "This {{ DATA }}"
 
+
+#Priority results:
 # 1. Args
 # 2. Task
-# 3. 
-# 4.
+# 3. File
+# 4. 
 # 5.
