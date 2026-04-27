@@ -1,0 +1,26 @@
+- name: data types in ansible
+  host: local
+  connection: local
+  vars:
+    Name: "Datta" #String
+    age: 24 #Int / Number
+    employee: true #Boolean (Ture or False)
+    skills: #List - / []
+    - Linux
+    - GitHub
+    - Shell Scripting
+    - Ansible
+    Traning_Details: #Map or Dictionary {}
+      name: "DevOps"
+      trainer: "SivaKumar"
+      duration: 140
+
+  tasks:
+  - name: print the employee information
+    ansible.builtin.debug:
+     msg: |
+     Name: {{ Name: }}
+     Age: {{ age }}
+     Employee: {{ employee }}
+     Skills: {{ skills }}
+     Details: {{ Traning_Details }}
