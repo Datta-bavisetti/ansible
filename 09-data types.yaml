@@ -1,5 +1,5 @@
 - name: data types in ansible
-  host: local
+  hosts: local
   connection: local
   vars:
     Emp_Name: "Datta" #String
