@@ -19,8 +19,8 @@
   - name: print the employee information
     ansible.builtin.debug:
      msg: |
-     Name: {{ Emp_Name }}
-     Age: {{ age }}
-     Employee: {{ employee }}
-     Skills: {{ skills }}
-     Details: {{ Traning_Details }}
+      Employee_name: {{ Emp_Name }}
+      Age: {{ age }}
+      Employee: {{ employee }}
+      Skills: {{ skills }}
+      Details: {{ Traning_Details }}
