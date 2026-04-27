@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars:
-    Is_Raining: true
+    Is_Raining: true # or false
   
   tasks:
   - name: check if I need to bring umbrella
