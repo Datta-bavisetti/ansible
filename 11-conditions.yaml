@@ -1,0 +1,11 @@
+- name: conditions in ansible
+  hosts: local
+  connection: local
+  vars:
+    Is_Raining: true
+  
+  tasks:
+  - name: check if I need to bring umbrella
+    ansible.builtin.debug:
+      msg: "Yes, it's raining outside. Better to bring umbrella!"
+    when: Is_Raining
