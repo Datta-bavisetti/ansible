@@ -2,7 +2,7 @@
   host: local
   connection: local
   vars:
-    Name: "Datta" #String
+    Emp_Name: "Datta" #String
     age: 24 #Int / Number
     employee: true #Boolean (Ture or False)
     skills: #List - / []
@@ -19,7 +19,7 @@
   - name: print the employee information
     ansible.builtin.debug:
      msg: |
-     Name: {{ Name: }}
+     Name: {{ Emp_Name }}
      Age: {{ age }}
      Employee: {{ employee }}
      Skills: {{ skills }}
