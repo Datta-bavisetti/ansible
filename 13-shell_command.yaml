@@ -3,8 +3,16 @@
   connection: local
 
   tasks:
-  - name: command test
-    ansible.builtin.command: cat /etc/passwd | grep root
+  # - name: command test
+  #   #ansible.builtin.command: cat /etc/passwd | grep root #got an error because it won't support all the commands
+  #   register: user_output
+
+  # - name: print output
+  #   ansible.builtin.debug:
+  #     msg: "{{ user_output }}"
+
+  - name: shell  test
+    ansible.builtin.shell: cat /etc/passwd | grep root
     register: user_output
 
   - name: print output
