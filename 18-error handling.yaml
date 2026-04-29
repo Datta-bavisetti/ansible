@@ -1,0 +1,19 @@
+- name: error handling in Ansible
+  hosts: local
+  connection: local
+  become: yes
+  tasks:
+  - name: check user exits or not
+    ansible.builtin.command: id datta
+    register: user_output
+    ignore_errors: yes
+  
+  - name: printing the output
+    ansible.builtin.debug:
+      msg: "Output is: {{ user_output }}"
+  
+  - name: creating new user
+    ansible.builtin.command: useradd datta
+    when: user_output.rc != 0
+
+  
