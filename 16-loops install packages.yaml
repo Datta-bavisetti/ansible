@@ -8,9 +8,9 @@
       name: "{{ item.name }}"
       state: "{{ item.state }}"
     loop: 
-    - { "name=nginx", "state=present"}
-    - { "name=mysql", "state=absent"}
-    - { "name=git", "state=absent"}
+    - { name="nginx", state="present"}
+    - { name="mysql", state="absent"}
+    - { name="git", state="absent"}
 
   - name: start the service
     ansible.builtin.service:
