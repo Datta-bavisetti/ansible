@@ -1,7 +1,25 @@
 - name: filters in ansible
   hosts: local
   connection: local
+  lowercasevar: "devops with aws"
+  uppercasevar: "DEVOPS WITH AWS"
   tasks:
   - name: printing the default value
     ansible.builtin.debug:
       msg: "Hi Datta, {{ Greetings | default('Good Morning')}}"
+  
+  - name: convert uppercase to lower
+    ansible.builtin.debug:
+      msg: "{{ lowercasevar | uppercase }}"
+
+  - name: convert lowercase to upper
+    ansible.builtin.debug:
+      msg: "{{ uppercasevar | lowercase }}"
+
+  - name: read students yaml
+    ansible.builtin.set_fact: # setting the variable
+      student_yaml: "{{ lookup('file', 'students.yaml' ) | from_yaml }}"
+  
+  - name: convert yaml to json
+    ansible.builtin.debug:
+      msg: "{{ student_yaml | to_nice_json }}"
