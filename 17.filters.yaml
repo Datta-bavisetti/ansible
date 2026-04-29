@@ -4,6 +4,7 @@
   vars:
     LowerCaseText: "devops with aws"
     UpperCaseText: "DEVOPS WITH AWS"
+    skills: Linux, AWS, GitHub
   tasks:
   - name: printing the default value
     ansible.builtin.debug:
@@ -24,3 +25,7 @@
   - name: convert yaml to json
     ansible.builtin.debug:
       msg: "{{ student_yaml | to_nice_json }}"
+  
+  - name: converting string to list
+    ansible.builtin.debug: 
+      msg: "{{ skills | split(,) }}"
