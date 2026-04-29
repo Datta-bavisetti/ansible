@@ -1,8 +1,9 @@
 - name: filters in ansible
   hosts: local
   connection: local
-  lowercasevar: "devops with aws"
-  uppercasevar: "DEVOPS WITH AWS"
+  vars:
+    lowercasevar: "devops with aws"
+    uppercasevar: "DEVOPS WITH AWS"
   tasks:
   - name: printing the default value
     ansible.builtin.debug:
