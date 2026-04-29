@@ -16,14 +16,12 @@
     ansible.builtin.command: useradd datta
     when: user_output.rc != 0
   
-  - name: delete user
-    ansible.builtin.command: userdel datta
-    register: delete_user
-    ignore_errors: yes
-    when: user_output.rc == 0
-   
+  # - name: delete user
+  #   ansible.builtin.command: userdel datta
+  #   register: delete_user
+  #   when: user_output.rc == 0
   
-  - name: print the output
-    ansible.builtin.debug:
-      msg: "Detelted the user"
-    when: delete_user.rc == 0
+  # - name: print the output
+  #   ansible.builtin.debug:
+  #     msg: "Detelted the user"
+  #   when: delete_user.rc == 0
