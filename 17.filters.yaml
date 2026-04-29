@@ -11,11 +11,11 @@
   
   - name: convert uppercase to lower
     ansible.builtin.debug:
-      msg: "{{ LowerCaseText | upper }}"
+      msg: "{{ UpperCaseText | lower }}"
 
   - name: convert lowercase to upper
     ansible.builtin.debug:
-      msg: "{{ UpperCaseText | lower }}"
+      msg: "{{ LowerCaseText | upper }}"
 
   - name: read students yaml
     ansible.builtin.set_fact: # setting the variable
