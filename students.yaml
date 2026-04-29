@@ -1,0 +1,27 @@
+students:
+  - id: 1
+    name: Ravi Kumar
+    age: 21
+    course: DevOps
+    skills:
+      - Linux
+      - Git
+      - Docker
+
+  - id: 2
+    name: Datta
+    age: 22
+    course: Cloud Computing
+    skills:
+      - AWS
+      - Terraform
+      - Python
+
+  - id: 3
+    name: Bhuvana
+    age: 20
+    course: Data Engineering
+    skills:
+      - SQL
+      - Hadoop
+      - Spark

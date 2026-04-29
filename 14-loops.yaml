@@ -1,0 +1,11 @@
+- name: loops in ansible
+  hosts: local
+  connection: local
+  tasks:
+  - name: greetings to multiple people
+    ansible.builtin.debug:
+      msg: "Hi {{ item }}, Good Morning!"
+    loop:
+    - Datta
+    - Bhuvana
+    - Veera
