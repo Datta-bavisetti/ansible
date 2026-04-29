@@ -20,6 +20,7 @@
     ansible.builtin.command: userdel datta
     register: delete_user
     when: user_output.rc == 0
+    ignore_errors: yes
   
   - name: print the output
     ansible.builtin.debug:
