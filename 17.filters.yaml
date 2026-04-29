@@ -28,4 +28,4 @@
   
   - name: converting string to list
     ansible.builtin.debug: 
-      msg: "{{ skills | split(,) }}"
+      msg: "{{ skills | split(',') }}"
