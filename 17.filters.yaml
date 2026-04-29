@@ -1,0 +1,7 @@
+- name: filters in ansible
+  hosts: local
+  connection: local
+  tasks:
+  - name: printing the default value
+    ansible.builtin.debug:
+      msg: "Hi Datta, {{ Greetings }} | dafault('Good Morning')"
